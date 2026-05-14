@@ -70,6 +70,11 @@ Please contact us at 0300-6981093 to book your appointment.
         return jsonify({
             "reply": str(e)
         })
+    
+@app.route("/", methods=["GET"])
+def home():
+    return jsonify({"status": "Creative Xpace API is running"})
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
