@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Creative Xpace | Interior Design</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h2>Creative Xpace</h2>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Design Your Dream Space</h1>
+            <p>
+                Creative Xpace brings elegant, modern, and functional interior design
+                solutions for homes, offices, and commercial spaces in Islamabad.
+            </p>
+            <a href="contact.html" class="btn">Book Consultation</a>
+        </div>
+
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0" alt="Interior Design">
+        </div>
+    </section>
+
+    <section class="categories">
+        <div class="category-card">Living Room</div>
+        <div class="category-card">Bedroom</div>
+        <div class="category-card">Kitchen</div>
+        <div class="category-card">Office</div>
+    </section>
+
+    <section class="stats">
+        <div class="stat-box">
+            <h2>120+</h2>
+            <p>Projects Completed</p>
+        </div>
+
+        <div class="stat-box">
+            <h2>85+</h2>
+            <p>Happy Clients</p>
+        </div>
+
+        <div class="stat-box">
+            <h2>5★</h2>
+            <p>Google Reviews</p>
+        </div>
+
+        <div class="stat-box">
+            <h2>10+</h2>
+            <p>Years Experience</p>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="about-text">
+            <h2>About Creative Xpace</h2>
+            <p>
+                Creative Xpace is an interior designing company based in Islamabad.
+                We create modern, elegant, and functional spaces for homes, offices,
+                and commercial projects.
+            </p>
+            <p>
+                Our focus is to transform ordinary spaces into beautiful environments
+                with smart planning, premium design, and professional execution.
+            </p>
+        </div>
+    </section>
+
+    <section class="services">
+        <h2>Our Services</h2>
+
+        <div class="service-boxes">
+            <div class="service-card">
+                <h3>Residential Interior</h3>
+                <p>Modern and luxury interiors for bedrooms, lounges, kitchens, and living spaces.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Office Interior</h3>
+                <p>Professional office layouts designed for comfort, productivity, and style.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>3D Visualization</h3>
+                <p>Preview your space through 3D design before final execution.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio">
+        <h2>Our Portfolio</h2>
+
+        <div class="portfolio-gallery">
+            <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85" alt="Interior Design">
+            <img src="https://images.unsplash.com/photo-1494526585095-c41746248156" alt="Interior Design">
+            <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858" alt="Interior Design">
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <h2>Let’s Design Your Space</h2>
+        <p>Contact Creative Xpace for modern interior design consultation in Islamabad.</p>
+
+        <div class="contact-buttons">
+            <a href="tel:03006981093" class="btn">Call Now</a>
+            <a href="https://wa.me/923006981093" class="btn whatsapp">WhatsApp</a>
+        </div>
+
+        <p class="address">328 Service Rd E, MPCHS E-11/3, Islamabad</p>
+    </section>
+
+    <div class="chatbot-box" id="chatbotBox">
+        <div class="chatbot-header">
+            Creative Xpace Assistant
+            <span onclick="toggleChat()">×</span>
+        </div>
+
+        <div class="chatbot-messages" id="chatMessages">
+            <p class="bot-message">Hi! How can I help you with interior design?</p>
+        </div>
+
+        <div class="chatbot-input">
+            <input type="text" id="userInput" placeholder="Ask about services...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+<button class="chatbot-button" onclick="toggleChat()">💬</button>
+    <script src="script.js"></script>
+
+</body>
+</html>
