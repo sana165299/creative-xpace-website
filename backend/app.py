@@ -99,16 +99,19 @@ def analyze_room():
             model="gemini-2.5-flash",
             contents=[
                 """
-                Analyze this room image like a professional interior designer.
+                    Analyze this room image like a professional interior designer.
 
-                Provide:
-                1. Room style
-                2. Suggested colors
-                3. Furniture improvements
-                4. Lighting improvements
-                5. Space optimization ideas
+                    Give only 5 short bullet points:
 
-Keep response very short. Maximum 5 bullet points. Each bullet should be one line only.                """,
+                    1. Room style
+                    2. Best color suggestion
+                    3. Furniture improvement
+                    4. Lighting improvement
+                    5. Space optimization
+
+                    Each point must be one short sentence.
+                    Do not write long paragraphs.
+                """,
                 image
             ]
         )
