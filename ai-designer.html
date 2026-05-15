@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>AI Designer | Creative Xpace</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h2>Creative Xpace</h2>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="ai-designer.html">AI Designer</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="ai-designer-hero">
+    <h1>AI Interior Design Assistant</h1>
+    <p>Upload your room image and get smart design suggestions for colors, furniture, lighting, and space optimization.</p>
+</section>
+
+<section class="ai-room-section">
+
+    <div class="ai-tool-card">
+
+        <div class="ai-upload-box">
+            <label for="roomImage" class="upload-area" id="uploadArea">
+                <div id="uploadPlaceholder">
+                    <span class="upload-icon">📸</span>
+                    <h3>Upload Room Image</h3>
+                    <p id="fileNameText">Drag & Drop or Click to Browse</p>
+                </div>
+            </label>
+
+            <input type="file" id="roomImage" accept="image/*" hidden>
+
+            <p id="uploadStatus" class="upload-status"></p>
+
+            <img id="previewImage" class="preview-inside" style="display:none;">
+
+            <button onclick="analyzeRoomImage()">Analyze Room</button>
+        </div>
+
+        <div id="aiResult" class="ai-result-box">
+            AI suggestions will appear here...
+        </div>
+
+    </div>
+
+</section>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

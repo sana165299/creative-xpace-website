@@ -3,3 +3,5 @@ flask-cors
 groq
 gunicorn
 python-dotenv
+pillow
+google-genai

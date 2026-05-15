@@ -4,22 +4,24 @@
     <title>Creative Xpace | Interior Design</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
 </head>
 
 <body>
 
     <header>
         <h2>Creative Xpace</h2>
-        <nav>
+       <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="services.html">Services</a>
+            <a href="ai-designer.html">AI Designer</a>
             <a href="contact.html">Contact</a>
         </nav>
     </header>
 
     <section class="hero">
-        <div class="hero-content">
+        <div class="hero-content" data-aos="fade-right">
             <h1>Design Your Dream Space</h1>
             <p>
                 Creative Xpace brings elegant, modern, and functional interior design
@@ -28,7 +30,7 @@
             <a href="contact.html" class="btn">Book Consultation</a>
         </div>
 
-        <div class="hero-image">
+        <div class="hero-image" data-aos="fade-left">
             <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0" alt="Interior Design">
         </div>
     </section>
@@ -46,7 +48,7 @@
             <p>Projects Completed</p>
         </div>
 
-        <div class="stat-box">
+        <div class="stat-box" data-aos="fade-up">
             <h2>85+</h2>
             <p>Happy Clients</p>
         </div>
@@ -81,7 +83,7 @@
         <h2>Our Services</h2>
 
         <div class="service-boxes">
-            <div class="service-card">
+            <div class="service-card" data-aos="zoom-in">
                 <h3>Residential Interior</h3>
                 <p>Modern and luxury interiors for bedrooms, lounges, kitchens, and living spaces.</p>
             </div>
@@ -119,7 +121,8 @@
 
         <p class="address">328 Service Rd E, MPCHS E-11/3, Islamabad</p>
     </section>
-
+    <div id="chat-body"></div>
+    
     <div class="chatbot-box" id="chatbotBox">
         <div class="chatbot-header">
             Creative Xpace Assistant
@@ -138,6 +141,13 @@
 
 <button class="chatbot-button" onclick="toggleChat()">💬</button>
     <script src="script.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+<script>
+AOS.init({
+    duration: 1000,
+    once: true
+});
+</script>
 </body>
 </html>
