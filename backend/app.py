@@ -12,7 +12,7 @@ CORS(app)
 import os
 
 client = Groq(api_key=os.getenv("GROQ_API_KEY"))
-client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
+gemini_client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 
 @app.route("/ping", methods=["GET"])
 def ping():
@@ -95,7 +95,7 @@ def analyze_room():
 
         image = Image.open(image_file)
 
-        response = client.models.generate_content(
+        response = gemini_client.models.generate_content(
             model="gemini-2.5-flash",
             contents=[
                 """
@@ -108,8 +108,7 @@ def analyze_room():
                 4. Lighting improvements
                 5. Space optimization ideas
 
-                Keep response professional and concise.
-                """,
+Keep response very short. Maximum 5 bullet points. Each bullet should be one line only.                """,
                 image
             ]
         )

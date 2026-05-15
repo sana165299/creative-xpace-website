@@ -77,29 +77,44 @@ if (roomImageInput) {
     });
 }
 
-function analyzeRoomImage() {
+async function analyzeRoomImage() {
+
     const imageInput = document.getElementById("roomImage");
     const resultBox = document.getElementById("aiResult");
-    const status = document.getElementById("uploadStatus");
 
     if (!imageInput.files.length) {
+
         resultBox.innerHTML = "Please upload a room image first.";
         return;
     }
 
-    status.innerHTML = "✅ Image uploaded successfully";
+    resultBox.innerHTML = "Analyzing room with AI...";
 
-    resultBox.innerHTML = `
-        <h3>AI Interior Suggestions</h3>
+    const formData = new FormData();
 
-        <p><b>Style:</b> Modern Minimalist</p>
+    formData.append("image", imageInput.files[0]);
 
-        <p><b>Furniture:</b> Add floating shelves, compact sofa, and warm wooden textures.</p>
+    try {
 
-        <p><b>Lighting:</b> Use pendant lighting and warm LED strips.</p>
+        const response = await fetch(
+            "https://creative-xpace-website.onrender.com/analyze-room",
+            {
+                method: "POST",
+                body: formData
+            }
+        );
 
-        <p><b>Space Optimization:</b> Use wall-mounted storage to maximize open space.</p>
+        const data = await response.json();
 
-        <p><b>Recommended Colors:</b> Warm beige, matte white, walnut brown.</p>
-    `;
+        resultBox.innerHTML = `
+            <h3>AI Interior Suggestions</h3>
+            <p>${data.reply}</p>
+        `;
+
+    } catch (error) {
+
+        console.error(error);
+
+        resultBox.innerHTML = "AI analysis failed.";
+    }
 }
