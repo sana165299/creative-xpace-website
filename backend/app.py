@@ -96,21 +96,21 @@ def analyze_room():
         image = Image.open(image_file)
 
         response = gemini_client.models.generate_content(
-            model="gemini-2.5-flash",
+            model="gemini-1.5-flash-8b"
             contents=[
                 """
-                    Analyze this room image like a professional interior designer.
+                Analyze this room image like a professional interior designer.
 
-                    Give only 5 short bullet points:
+                Return response EXACTLY in this format:
 
-                    1. Room style
-                    2. Best color suggestion
-                    3. Furniture improvement
-                    4. Lighting improvement
-                    5. Space optimization
+                • Room Style: ...
+                • Suggested Colors: ...
+                • Furniture Improvements: ...
+                • Lighting Improvements: ...
+                • Space Optimization: ...
 
-                    Each point must be one short sentence.
-                    Do not write long paragraphs.
+                Keep every point short.
+                Maximum one sentence per point.
                 """,
                 image
             ]

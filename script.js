@@ -106,10 +106,16 @@ async function analyzeRoomImage() {
 
         const data = await response.json();
 
-        resultBox.innerHTML = `
-            <h3>AI Interior Suggestions</h3>
-            <p>${data.reply}</p>
-        `;
+       const formattedReply = data.reply
+    .replace(/\*\*/g, "")
+    .replace(/\n/g, "<br><br>");
+
+    resultBox.innerHTML = `
+        <h3>AI Interior Suggestions</h3>
+        <div class="ai-points">
+            ${formattedReply}
+        </div>
+    `;
 
     } catch (error) {
 
